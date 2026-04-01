@@ -14,11 +14,11 @@ jobs:
 
       - name: Deploy to VPS via SSH
         uses: appleboy/ssh-action@v1.2.0
-
         with:
           host: ${{ secrets.SERVER_IP }}
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
+
           port: 22
           script: |
             cd /var/www/tomoe_web  # VPS上のプロジェクトパスに変更してください
