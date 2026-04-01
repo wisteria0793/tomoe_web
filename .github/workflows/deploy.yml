@@ -21,7 +21,7 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22
           script: |
-            cd /path/to/your/project/tomoe_web  # VPS上のプロジェクトパスに変更してください
+            cd /var/www/tomoe_web  # VPS上のプロジェクトパスに変更してください
             git pull origin main
             docker compose -f docker-compose.prod.yml up -d --build
             docker system prune -f  # 古い不要なイメージを削除
