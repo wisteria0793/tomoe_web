@@ -1,0 +1,14 @@
+Django>=5.1.2
+djangorestframework
+django-cors-headers
+requests
+stripe
+python-dateutil
+Pillow
+django-extensions
+python-dotenv
+asgiref
+sqlparse
+dj-database-url
+psycopg2-binary
+gunicorn

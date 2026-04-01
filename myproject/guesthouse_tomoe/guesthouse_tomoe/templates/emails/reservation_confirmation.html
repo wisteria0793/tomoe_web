@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>予約確認 / Reservation Confirmation</title>
+</head>
+<body>
+    <p>{name} 様 / Dear {name}</p>
+    <p>このたびは、<strong>{facility_name}</strong> をご予約いただき誠にありがとうございます。</p>
+    <p>Thank you for choosing to stay at <strong>{facility_name}</strong>. We truly appreciate your reservation.</p>
+
+    <h3>予約内容 / Reservation Details</h3>
+    <ul>
+        <li>チェックイン / Check-in: {check_in_date}</li>
+        <li>チェックアウト / Check-out: {check_out_date}</li>
+        <li>ゲスト / Guests: {guests} 名</li>
+        <li>宿泊料金 / Accommodation Fee: ¥{total_price}</li>
+        <li>割引額 / Discount: -¥{discount}</li>
+        <li>最終料金 / Final Price: ¥{final_price}</li>
+        <li>備考 / Notes: {notes}</li>
+	<li>メールアドレス / Email: {email}</li>
+	<li>電話番号 / Phone: {phone}</li>
+    </ul>
+
+    <!-- チェックインについて -->
+    <h3>案内について / About information</h3>
+    <p>２営業日以内にご連絡いたしますので、今しばらくお待ちください。</p>
+    <p>何かご質問がございましたら、お気軽にお問い合わせください。</p>
+
+    <p>We will contact you within two business days, so please wait a little longer.</p>
+    <p>If you have any questions, please feel free to contact us.</p>
+
+    <p>--------------------</p>
+    <p>
+        ゲストハウス巴.com<br>
+        Guesthouse Tomoe.com<br>
+        〒040-0035 北海道函館市松風町1-2 / 1-2 Matsukaze-cho, Hakodate, Hokkaido 040-0035<br>
+        Phone: 080-9322-4522<br>
+        Email: hakodateshino0901@gmail.com<br>
+    </p>
+</body>
+</html>

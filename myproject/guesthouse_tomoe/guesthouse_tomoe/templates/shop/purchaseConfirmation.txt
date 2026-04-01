@@ -1,0 +1,24 @@
+{buyer_name} 様
+
+このたびは、{product_name} をご購入いただき誠にありがとうございます。
+
+購入内容:
+- 商品名: {product_name}
+- 商品説明: {product_description}
+- 価格: ¥{price}
+
+配送先情報:
+- お名前: {buyer_name}
+- メール: {buyer_email}
+- 電話番号: {buyer_phone}
+- 住所: {buyer_address1} {buyer_address2}
+- 郵便番号: {buyer_postal_code}
+- 国籍: {buyer_nationality}
+
+何かご質問がございましたら、お気軽にお問い合わせください。
+
+--------------------
+ゲストハウス巴.com
+〒040-0035 北海道函館市松風町1-2
+電話: 080-9322-4522
+Email: hakodateshino0901@gmail.com 

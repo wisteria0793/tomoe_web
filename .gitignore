@@ -43,8 +43,18 @@ wheels/
 db.sqlite3
 db.sqlite3-journal
 local_settings.py
-staticfiles/
-media/
+**/staticfiles/
+**/media/
+**/static/
+**/images/build*/
+**/fonts/images/
+**/*.jpg
+**/*.png
+**/*.JPG
+**/*.PNG
+**/*.mp4
+**/*.mov
+
 
 # React
 /tomoe/build/

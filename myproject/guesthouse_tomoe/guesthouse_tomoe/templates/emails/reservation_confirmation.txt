@@ -1,0 +1,16 @@
+{{ name }} 様
+
+このたびは、{{ facility_name }} をご予約いただき誠にありがとうございます。
+
+予約内容:
+- チェックイン: {{ check_in_date }}
+- チェックアウト: {{ check_out_date }}
+- 大人: {{ adult_count }} 名
+- 子供: {{ child_count }} 名
+- 幼児: {{ infant_count }} 名
+- 宿泊料金: ¥{{ total_price }}
+- 割引額: -¥{{ discount }}
+- 最終料金: ¥{{ final_price }}
+- 備考: {{ notes }}
+
+何かご質問がございましたら、お気軽にお問い合わせください。
