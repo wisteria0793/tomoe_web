@@ -1,0 +1,227 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  gap: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* 各セクション */
+.section {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.section:last-child {
+  border-right: none;
+}
+
+.section span {
+  color: #555;
+}
+
+/* ゲストメニュー */
+.menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 20;
+}
+
+.menuItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+
+.menuItem div {
+  font-weight: bold;
+}
+
+.menuItem small {
+  font-size: 12px;
+  color: #888;
+}
+
+.button {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #fff;
+  margin: 0 10px;
+}
+
+/* カレンダー */
+.calendarPopup {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  padding: 10px;
+}
+
+.react-calendar__tile {
+  font-size: 18px; /* 数字のフォントサイズを調整 */
+}
+
+.react-calendar__month-view__days__day {
+  display: none; /* 各日の表示を非表示 */
+}
+
+.react-calendar__month-view__weekdays {
+  display: none; /* 曜日のヘッダーを非表示 */
+}
+
+.react-calendar__navigation__label {
+  font-size: 16px; /* 月と年のフォントサイズを調整 */
+}
+
+.react-calendar{
+  border: none;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.clearButton,
+.closeButton {
+  padding: 10px 20px;
+  font-size: 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.clearButton {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.closeButton {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* 日付入力 */
+.datePickerWrapper {
+  display: flex;
+  justify-content: space-between;
+  flex: 2;
+  gap: 10px;
+}
+
+.dateInput {
+  flex: 1;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.dateInput span {
+  font-size: 14px;
+}
+
+.dateInput .dateLabel {
+  font-size: 12px;
+  color: #888;
+}
+
+/* 検索ボタン */
+.searchButton {
+  flex: 0 0 auto;
+  width: 120px;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 16px;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 15px;
+    width: 90%;
+  }
+
+  .datePickerWrapper {
+    flex-direction: column; /* 縦並びにする */
+    gap: 15px; /* 縦の余白を広げる */
+  }
+
+  .calendarPopup {
+    position: static; /* ポップアップの絶対配置を解除 */
+    margin-top: 10px;
+  }
+
+  .section {
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    gap: 5px;
+  }
+
+  .section:last-child {
+    border-bottom: none;
+  }
+
+  .menu,
+  .calendarPopup {
+    width: 100%;
+  }
+
+  .searchButton {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+  }
+}
+
+
+.disabled {
+  background-color: #d3d3d3; /* 無効な日付に灰色を設定 */
+  color: #999;
+  pointer-events: none; /* 選択不可にする */
+}

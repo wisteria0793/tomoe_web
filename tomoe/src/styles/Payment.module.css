@@ -1,0 +1,184 @@
+/* src/styles/Payment.module.css */
+.paymentContainer {
+  display: flex;
+  /* Flexboxを使用 */
+  justify-content: space-between;
+  /* 左右に配置 */
+  padding: 200px 60px 120px;
+  width: 100%;
+  /* 幅を広げる */
+  margin: auto;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  background-color: #FAF3E0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.productInfo {
+  flex: 1;
+  /* 左側のコンテンツを広げる */
+  margin-right: 20px;
+  /* 右側との間隔 */
+  padding: 20px;
+  /* 内側の余白 */
+  border: 1px solid #e0e0e0;
+  /* 商品情報のボーダー */
+  border-radius: 10px;
+  /* 角を丸く */
+  background-color: #f9f9f9;
+  /* 背景色 */
+}
+
+.buyerInfo {
+  flex: 1;
+  /* 右側のコンテンツを広げる */
+  padding: 20px;
+  /* 内側の余白 */
+  border: 1px solid #e0e0e0;
+  /* 購入者情報のボーダー */
+  border-radius: 10px;
+  /* 角を丸く */
+  background-color: #f9f9f9;
+  /* 背景色 */
+  display: flex;
+  /* Flexboxを使用 */
+  flex-direction: column;
+  /* 縦に並べる */
+}
+
+.productTitle {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.productImage {
+  width: auto;
+  /* 画像の幅を100%に */
+  height: 220px;
+  /* 高さを固定 */
+  object-fit: cover;
+  /* 画像を隙間なく広げ、見切れる部分を省く */
+  object-position: top;
+  /* 上半分を表示 */
+  border-radius: 10px;
+  /* 角を丸く */
+  margin-bottom: 10px;
+  /* 下部の余白 */
+}
+
+.productPrice {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #28a745;
+}
+
+.inputField {
+  display: block;
+  width: 100%;
+  /* フィールドの横幅を広げる */
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.shippingLabel {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.errorText {
+  color: red;
+  font-size: 14px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+.totalContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  /* 上部の余白 */
+}
+
+.totalText {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.purchaseButton {
+  align-self: flex-end;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.purchaseButton:hover {
+  background-color: #218838;
+}
+
+/* src/styles/Payment.module.css */
+.totalContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  /* 上部に揃える */
+  margin-top: 20px;
+  /* 上部の余白 */
+}
+
+.breakdown {
+  display: flex;
+  flex-direction: column;
+  /* 縦に並べる */
+}
+
+.totalText {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 10px;
+  /* 合計金額の上部余白 */
+}
+
+
+@media screen and (max-width: 780px) {
+  .paymentContainer {
+    flex-wrap: wrap;
+    padding: 200px 20px 120px;
+    flex-direction: column;
+
+  }
+
+  .productInfo {
+    margin-right: 0;
+    margin-bottom: 50px;
+  }
+
+  .buyerInfo {
+    display: block;
+    /* または none; */
+    flex: unset;
+    /* または flex: initial; */
+  }
+
+  .inputField {
+    display: inline;
+  }
+}
+
+.shippingCheckbox {
+  margin-right: 5px;
+  /* Adjust the margin as needed */
+}

@@ -1,0 +1,35 @@
+.contact {
+  max-width: 500px;
+  /* margin-top: 50px; */
+  margin: 50px auto;
+  background: #fff; /* 背景を薄いグレーに */
+  padding: 30px 20px;
+  border-radius: 15px; /* 角を丸く */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center; /* コンテンツを中央揃え */
+}
+
+.contact__content {
+  display: flex;
+  flex-direction: column; /* スマホでも整列 */
+  gap: 20px;
+  align-items: center;
+}
+
+.contact__item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.contact__item img {
+  width: 24px; /* アイコンサイズ */
+  height: 24px;
+}
+
+.contact__item span {
+  font-size: 1rem;
+  font-weight: bold;
+}

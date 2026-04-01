@@ -1,0 +1,59 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.zen-maru-gothic-regular {
+  font-family: "Zen Maru Gothic", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+.custom-row-width {
+  width: 100%;
+  /* スマホサイズ */
+  margin: 0 auto;
+}
+
+@media (min-width: 576px) {
+
+  /* タブレットサイズ */
+  .custom-row-width {
+    width: 90%;
+  }
+}
+
+@media (min-width: 768px) {
+
+  /* 中型デバイス */
+  .custom-row-width {
+    width: 80%;
+  }
+}
+
+@media (min-width: 992px) {
+
+  /* 大型デバイス */
+  .custom-row-width {
+    width: 80%;
+  }
+}
+
+@media (min-width: 1200px) {
+
+  /* 大きなPC */
+  .custom-row-width {
+    width: 75%;
+  }
+}

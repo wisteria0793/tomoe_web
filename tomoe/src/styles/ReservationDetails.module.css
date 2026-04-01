@@ -1,0 +1,250 @@
+/* 全体の背景 */
+.reservationDetails {
+    background-color: #FAF3E0;
+    min-height: 100vh;
+    padding-top: 10rem;
+    font-family: 'Helvetica', sans-serif;
+}
+
+/* ステップヘッダー */
+.stepHeader {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.stepNumber {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    /* background-color: #007bff; */
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.stepTitle {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+/* 情報セクション */
+.infoSection {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+    margin: 0 auto;
+    padding: 20px;
+    width: 100%;
+}
+
+/* 入力フォーム */
+.flexFill {
+    margin-bottom: 1rem;
+    text-align: start;
+}
+
+.flexFill label {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+    
+}
+
+.flexFill input {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    width: 100%;
+}
+
+/* 部屋情報 */
+.roomCard {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 10px;
+}
+
+.roomTitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.roomDetails {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #555;
+}
+
+.roomImg {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin: 0 auto;
+}
+
+.reserveDetail {
+    margin: 0 auto;
+    text-align: start;
+}
+
+/* キャンセルポリシー */
+.roomPolicy {
+    font-size: 0.95rem;
+    color: #666;
+}
+
+.roomPolicy p {
+    margin-bottom: 0.5rem;
+}
+
+/* サマリーセクション */
+.summarySection {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+}
+
+.summaryTitle {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+/* 価格リスト */
+.summaryDetail ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.summaryDetail ul li {
+    font-size: 1rem;
+    color: #555;
+    padding: 5px 0;
+    border-bottom: 1px dashed #ddd;
+}
+
+.summaryDetail ul li:last-child {
+    border-bottom: none;
+}
+
+/* 合計価格表示 */
+.summaryDetail .total-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #007bff;
+    margin-top: 1rem;
+    text-align: right;
+}
+
+/* ボタン */
+.summarySection Button {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    border: none;
+    border-radius: 30px;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.summarySection Button:hover {
+    background: linear-gradient(135deg, #feb47b, #ff7e5f);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* レイアウト調整 */
+.leftComponent {
+    max-width: 700px;
+    width: 100%;
+    
+}
+
+.rightComponent {
+    position: sticky;
+    top: 200px;
+    align-self: flex-start;
+    margin: 0 auto;
+}
+
+/* モバイルビュー調整 */
+@media (max-width: 768px) {
+    .roomCard {
+        flex-direction: column; /* 画面幅が狭い場合、縦並びに切り替え */
+    }
+    .rightComponent {
+        margin-bottom: 100px;
+    }
+}
+
+
+.noteField{
+    max-width: 400px;
+    width: 100%;
+}
+
+.guestSelector {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 1rem 0;
+    padding: 0.5rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.guestTypeText {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.guestType label {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
+}
+
+.guestSelect {
+    padding: 0.25rem 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: white;
+    font-size: 0.9rem;
+}
+
+.guestSelect:focus {
+    outline: none;
+    border-color: #2a9d8f;
+    box-shadow: 0 0 0 2px rgba(42, 157, 143, 0.2);
+}
+
+@media (max-width: 768px) {
+    .guestSelector {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .guestType {
+        justify-content: space-between;
+    }
+}

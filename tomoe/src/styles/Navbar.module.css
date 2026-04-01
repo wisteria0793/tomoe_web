@@ -1,0 +1,368 @@
+/***********************************
+ * ヘッダー共通
+ ***********************************/
+ .header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: transparent;
+  /* background: #fff; */
+  z-index: 1000;
+  padding: 20px 40px;
+  transition: transform 0.3s ease-in-out;
+  /* box-shadow: 0 2px 6px rgba(0,0,0,0.05); */
+}
+
+/* スクロール時に隠す/表示 */
+.header.hidden {
+  transform: translateY(-100%);
+}
+.header.visible {
+  transform: translateY(0);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* flex-direction: row-reverse; */
+}
+
+.leftSection {
+  display: flex;
+  align-items: center;
+}
+.rightSection {
+  display: flex;
+  align-items: center;
+}
+
+/***********************************
+ * ロゴ
+ ***********************************/
+.logo img {
+  height: 60px;
+}
+
+/***********************************
+ * PC用メニュー
+ ***********************************/
+/* PC向けのメニューをまとめる親コンテナ */
+.pcMenus {
+  display: none; /* モバイルでは非表示にする */
+  flex-direction: column; /* Arrange items in a column for two rows */
+  align-items: flex-end; /* Align items to the right */
+  gap: 10px; /* Space between the two rows */
+}
+
+/* PC上部メニュー（お問い合わせ、言語など） */
+.pcTopNavMenu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+}
+.pcTopNavMenu li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+/* PC下部メニュー（施設紹介、FAQなど） */
+.pcNavMenu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 30px;
+  margin-left: 0; /* Align with the top menu */
+}
+.pcNavMenu li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/***********************************
+ * ハンバーガー (モバイルメイン)
+ ***********************************/
+.hamburger {
+  font-size: 1.8rem;
+  cursor: pointer;
+  display: block; /* 初期はモバイル想定: 表示 */
+}
+
+/***********************************
+ * ドロワー (モバイルメイン)
+ ***********************************/
+/* オーバーレイ */
+.drawerOverlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+.drawerOverlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ドロワーメニュー本体 */
+.drawerMenu {
+  position: fixed;
+  top: 0;
+  right: -100%; /* Start off-screen */
+  width: 80%;
+  max-width: 300px;
+  height: 100%;
+  background-color: #FAF3E0;
+  /* background-color: #fff; */
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
+  transition: right 0.3s ease;
+  z-index: 1000;
+  overflow-y: auto;
+}
+.drawerOverlay.active .drawerMenu {
+  right: 0; /* Slide in */
+}
+
+/* ドロワーヘッダー */
+.drawerHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.closeBtn {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 10px;
+}
+.closeIcon {
+  font-size: 1.5rem;
+}
+.drawerSearch {
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 1rem;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  outline: none;
+}
+
+/* ドロワーメニュー中のナビ */
+.drawerNav {
+  margin-bottom: 24px;
+  font-weight: bold;
+}
+
+/* モバイル用 topNavMenu / navMenu */
+.topNavMenu, .navMenu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* 下線や背景などは好みに合わせて */
+.topNavMenu li, .navMenu li {
+  border-bottom: 1px solid #eee;
+}
+.topNavMenu li a, .navMenu li a {
+  display: block;
+  padding: 16px;
+  color: #000;
+  text-decoration: none;
+  font-size: 1rem;
+}
+.topNavMenu li a:hover, .navMenu li a:hover {
+  background-color: #f9f9f9;
+}
+
+/* ドロップダウン */
+.dropdown {
+  position: relative;
+}
+
+.dropdownToggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 12px 20px;
+}
+
+.facilityList {
+  
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 80%;
+  max-width: 300px;
+  height: 100%;
+  background-color: #FAF3E0;
+  z-index: 1100;
+  list-style: none;
+  padding: 8px 0;
+  margin: 0;
+  transition: right 0.3s ease;
+}
+
+.facilityList.active {
+  right: 0;
+}
+
+.backButton {
+  display: block;
+  width: 100%;
+  padding: 12px 20px;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #333;
+  transition: background-color 0.2s ease;
+}
+
+.backButton:hover {
+  background-color: #e0e0e0;
+}
+
+/* ドロワーフッター例 */
+.drawerFooter {
+  border-top: 1px solid #eee;
+  padding-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 90%;
+  margin: 0 auto;
+}
+.drawerLanguage {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  justify-content: center;
+}
+.languageIcon {
+  font-size: 1.2rem;
+}
+.drawerLangButtons {
+  display: flex;
+  gap: 8px;
+}
+.langBtn {
+  flex: 1;
+  border: 1px solid #ccc;
+  background: #fff;
+  padding: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.2s ease;
+  text-decoration: none;
+  color: inherit; /* or specify a color */
+}
+.langBtn:hover {
+  background-color: #f4f4f4;
+}
+
+/***********************************
+ * 769px以上（PC）の表示切り替え
+ ***********************************/
+@media (max-width: 320px) {
+  /* PCではドロワーを非表示にする */
+  .drawerOverlay,
+  .drawerMenu {
+    display: none;
+  }
+
+  /* ハンバーガーアイコンも非表示 */
+  .hamburger {
+    display: none;
+  }
+
+  /* 代わりにPC向けメニューを表示 */
+  .pcMenus {
+    display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 20px 20px;
+  }
+  .hamburger {
+    display: block;
+  }
+}
+
+.topNavMenu {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.topNavMenu h3 {
+    color: #333;
+    padding: 15px 20px;
+    margin: 0;
+    font-size: 1.2rem;
+    border-bottom: 1px solid #eee;
+}
+
+.facilitySubMenu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.facilitySubMenu li {
+    padding: 0;
+}
+
+.facilitySubMenu li a {
+    display: block;
+    padding: 12px 30px;
+    color: #666;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.facilitySubMenu li a:hover {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.navMenu {
+    margin-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.navMenu li a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 20px;
+    color: #666;
+    text-decoration: none;
+}
+
+.navMenu li a:hover {
+    background-color: #f5f5f5;
+    color: #333;
+}

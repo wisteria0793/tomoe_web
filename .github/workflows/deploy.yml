@@ -1,0 +1,26 @@
+name: Deploy to Xserver VPS
+
+on:
+  push:
+    branches:
+      - main  # メインブランチにプッシュされたときに実行
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Deploy to VPS via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SERVER_IP }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: 22
+          script: |
+            cd /path/to/your/project/tomoe_web  # VPS上のプロジェクトパスに変更してください
+            git pull origin main
+            docker compose -f docker-compose.prod.yml up -d --build
+            docker system prune -f  # 古い不要なイメージを削除

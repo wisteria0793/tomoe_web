@@ -1,0 +1,39 @@
+.footer {
+  background-color: #2c3e50; /* サイトのカラーパレットに合わせたダークブルー */
+  color: #ecf0f1; /* 明るい文字色 */
+  text-align: center; /* 中央揃え */
+  padding: 30px 20px; /* 上下のパディングを増やす */
+  position: relative; /* 相対位置 */
+  bottom: 0; /* 下部に配置 */
+  width: 100%; /* 幅を100%に */
+  box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.5); /* 強いシャドウ */
+  font-size: 0.9rem; /* フォントサイズ */
+  /* border-top: 2px solid #3498db; 上部に青いボーダー */
+}
+
+.footer p {
+  margin: 0; /* マージンをリセット */
+}
+
+.privacyPolicyLink {
+  color: #fff; /* リンクの色 */
+  text-decoration: none; /* 下線を消す */
+  margin-top: 10px; /* 上部のマージン */
+  display: inline-block; /* インラインブロックにする */
+  font-weight: bold; /* 太字 */
+  transition: color 0.3s ease; /* ホバー時の色変更にトランジションを追加 */
+}
+
+.privacyPolicyLink:hover {
+  text-decoration: underline; /* ホバー時に下線を表示 */
+  color: #1abc9c; /* ホバー時の色を変更 */
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+  .footer {
+    padding: 20px 10px; /* パディングを調整 */
+    font-size: 0.8rem; /* フォントサイズを調整 */
+    margin-bottom: 50px;
+  }
+}

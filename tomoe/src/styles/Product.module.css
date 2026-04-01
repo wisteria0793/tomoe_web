@@ -1,0 +1,100 @@
+/* src/styles/Product.module.css */
+.productCard {
+  position: relative;
+  border: 1px solid #e0e0e0; /* ボーダー */
+  border-radius: 10px; /* 角を丸く */
+  margin: 10px; /* 外側の余白 */
+  background-color: var(--card-bg-color); /* カード背景色 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* シャドウ */
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s; /* ホバー時のトランジション */
+  cursor: pointer; /* カーソルをポインターに */
+  text-align: center; /* テキストを中央揃え */
+}
+
+.productCard:hover {
+  transform: scale(1.05); /* ホバー時に拡大 */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* ホバー時のシャドウ */
+  background-color: var(--card-hover-bg-color); /* ホバー時の背景色 */
+}
+
+.productTitle{
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.productImage {
+  width: 100%; /* 画像の幅を100%に */
+  height: 220px; /* 高さを固定 */
+  object-fit: cover; /* 画像を隙間なく広げ、見切れる部分を省く */
+  object-position: top; /* 上半分を表示 */
+  border-radius: 10px; /* 角を丸く */
+  margin-bottom: 10px; /* 下部の余白 */
+}
+
+.productDescription {
+  font-size: 1.2rem; /* 説明文のフォントサイズ */
+  margin: 10px 0; /* 上下の余白 */
+  color: var(--text-color); /* 文字色 */
+}
+
+.productPrice {
+  font-size: 1.1rem; /* 価格のフォントサイズ */
+  color: var(--primary-color); /* 価格の色 */
+  margin: 5px 0; /* 上下の余白 */
+}
+
+.productGenres {
+  margin-top: 10px; /* 上部の余白 */
+  font-size: 0.9rem; /* フォントサイズ */
+  color: var(--sub-text-color); /* 文字色 */
+}
+
+.genreTag {
+  display: inline-block;
+  background-color: #e0e0e0; /* 背景色 */
+  color: #333; /* 文字色 */
+  border-radius: 5px; /* 角を丸く */
+  padding: 5px 10px; /* 内側の余白 */
+  margin-right: 5px; /* 右側の余白 */
+  font-size: 0.9rem; /* フォントサイズ */
+}
+
+.cartSummary {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.cartSummary.updated {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+.cartSummary p {
+    margin: 5px 0;
+}
+
+.cartSummary button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    outline: none;
+}
+
+.cartSummary button:hover {
+    background-color: var(--secondary-color);
+}
+
+.cartSummary button:focus {
+    box-shadow: 0 0 0 3px rgba(78, 205, 196, 0.5);
+}

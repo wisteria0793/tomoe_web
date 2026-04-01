@@ -1,0 +1,144 @@
+.accessContainer {
+    padding: 60px 20px;
+    background-color: transparent;
+    text-align: left;
+    margin: auto;
+    max-width: 1200px;
+    padding-bottom: 200px;
+}
+
+.title {
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contentWrapper {
+    display: flex;
+    gap: 40px;
+}
+
+.leftSection {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.infoSection {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.mapSection {
+    flex: 1.2;
+    background-color: #ffffff;
+    /* padding: 20px; */
+    border-radius: 10px;
+}
+
+.subtitle {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #555;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.text {
+    font-size: 1.1rem;
+    color: #34495e;
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+.map {
+    width: 100%;
+    height: 100%;
+    min-height: 450px;
+    border: 0;
+    border-radius: 10px;
+}
+
+.transportSection {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.transportTitle {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #2980b9;
+    margin-bottom: 15px;
+}
+
+.transportList {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.transportListItem {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+.transportListItem span {
+    flex: 1;
+}
+
+.facilityName {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #2980b9;
+}
+
+.addressInfo {
+    margin-top: 15px;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.contactItem {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+    color: #34495e;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .contentWrapper {
+        /* flex-direction: column; */
+        flex-direction: column-reverse;
+        
+    }
+    
+    .mapSection {
+        order: -1; /* マップを上に移動 */
+    }
+    .transportList{
+        padding-left: 0;
+        margin-left: 0;
+    }
+    .transportListItem{
+        flex-direction: row;
+        flex-wrap: wrap;
+
+    }
+} 

@@ -1,0 +1,100 @@
+/* 親要素のスタイリング */
+.facilities {
+  width: 100%;
+  margin: 0 auto;
+  /* padding: 20px; */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Row スタイルの修正 */
+.custom-row-width {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 0 auto; /* 中央寄せ */
+  width: 100%; /* 必要に応じて幅を調整 */
+}
+
+
+
+
+
+/* カード全体のスタイル */
+.card {
+  border: none; /* デフォルトのボーダーを削除 */
+  border-radius: 12px; /* カード全体に丸みを追加 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 柔らかいシャドウ */
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #ffffff; /* 背景を白に設定 */
+}
+
+.card:hover {
+  transform: translateY(-5px); /* ホバー時にカードを少し持ち上げる */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* ホバー時のシャドウを強調 */
+}
+
+/* カード画像のスタイル */
+.card img {
+  object-fit: cover; /* 画像のトリミングを調整 */
+  height: 200px; /* 固定の高さ */
+  width: 100%; /* カード全体に画像をフィット */
+  border-bottom: 5px solid #F4A261; /* ボトムラインを追加 */
+}
+
+/* カード本文 */
+.card-body {
+  text-align: left; /* テキストを中央揃え */
+  padding: 1rem;
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef); /* 軽いグラデーション */
+}
+
+/* タイトル */
+.card-title {
+  font-size: 1.3rem; /* 大きめのフォントサイズ */
+  font-weight: bold;
+  color: #F4A261; /* 鮮やかな緑 */
+  margin-bottom: 0.5rem;
+   /* 微妙な間隔を追加 */
+}
+
+/* キャッチコピー */
+.card-body p {
+  font-size: 1.1rem;
+  color: #6c757d; /* 落ち着いた色 */
+  margin-bottom: 15px;
+  line-height: 1.6; /* 読みやすさを向上 */
+  text-align: start;
+}
+
+/* ボタンコンテナ */
+.button-container {
+  display: flex;
+  justify-content: center; /* ボタンを中央揃え */
+  gap: 10px; /* ボタン間のスペースを確保 */
+  margin-top: 15px;
+}
+
+/* ボタン */
+.button-container Button {
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(135deg, #f4a261, #2a9d8f); /* グラデーション */
+  border: none;
+  border-radius: 25px; /* 丸みを追加 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button-container Button:hover {
+  background: linear-gradient(135deg, #2a9d8f, #f4a261);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+

@@ -1,0 +1,70 @@
+/* セクション全体のスタイル */
+.stay-steps {
+  background: linear-gradient(135deg, #fdfbfb, #f0f0f0); /* 柔らかなグラデーション背景 */
+  background: transparent; /* 柔らかなグラデーション背景 */
+  padding: 4rem 0;
+  font-family: 'Helvetica', sans-serif;
+  margin-top: 200px;
+}
+
+/* セクションタイトル */
+.section-title {
+  font-size: 2rem;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+/* ステップカードのスタイル */
+.step-card {
+  border: none; /* ボーダー削除 */
+  border-radius: 12px; /* 柔らかい角丸 */
+  background: white;
+  padding: 2rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* 深みのある影 */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.step-card:hover {
+  transform: translateY(-10px); /* ホバー時に浮き上がる */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* 強調された影 */
+}
+
+/* ステップ番号のアイコン */
+.step-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff7043, #ff8c42); /* 鮮やかなグラデーション */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0 auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* アイコンにも影を追加 */
+}
+
+/* ステップタイトル */
+.step-title {
+  color: #333;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+/* ステップ説明文 */
+.step-description {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 0.5rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .step-card{
+      width: 90%;
+  }
+
+}

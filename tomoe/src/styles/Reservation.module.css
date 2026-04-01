@@ -1,0 +1,123 @@
+/* 全体のコンテナ */
+.container{
+  background: #FAF3E0;
+  width: 100%;
+  height: auto;
+}
+
+.reservationContainer {
+  /* width: 100%;
+  height: auto; */
+  padding-top: 200px;
+  /* padding: 2rem 1rem; */
+  background-color: #FAF3E0; /* 背景を白に設定 */
+}
+
+/* 検索フィールド */
+.searchField {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  
+}
+
+/* カード全体 */
+.card {
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #fff; /* カード背景を白に設定 */
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* カードの本文 */
+.card-body {
+  padding: 1rem;
+  text-align: left; /* 左寄せ */
+  background-color: #fff; /* 本文背景を白に設定 */
+}
+
+/* カードタイトル */
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+/* カード画像のスタイル */
+.card img {
+  object-fit: cover; /* 画像のトリミングを調整 */
+  height: 200px; /* 固定の高さ */
+  width: 100%; /* カード全体に画像をフィット */
+  border-bottom: 5px solid #F4A261; /* ボトムラインを追加 */
+}
+
+/* 紹介文のスタイル */
+.card p {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 1rem;
+  line-height: 1.5; /* 行間を広げる */
+  text-align: left; /* 左寄せ */
+}
+
+/* カスタム行 */
+.custom-row-width {
+  max-width: 1200px;
+  margin: 0 auto; /* 中央寄せ */
+}
+
+/* 検索結果エリア */
+.searchBottom {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: #FAF3E0; /* 検索結果背景 */
+
+}
+/* ボタンコンテナ */
+.button-container {
+  display: flex;
+  justify-content: center; /* ボタンを中央揃え */
+  gap: 10px; /* ボタン間のスペースを確保 */
+  margin-top: 15px;
+}
+
+/* ボタン */
+.button-container Button {
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(135deg, #f4a261, #2a9d8f); /* グラデーション */
+  border: none;
+  border-radius: 25px; /* 丸みを追加 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button-container Button:hover {
+  background: linear-gradient(135deg, #2a9d8f, #f4a261);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/* 条件に一致しないメッセージ */
+.no-results {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #888;
+  margin-top: 2rem;
+}
+
+
+.footerSpacer{
+  height: 200px;
+  background: #FAF3E0;
+}

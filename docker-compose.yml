@@ -1,0 +1,35 @@
+# ローカル開発用 Docker Compose
+
+services:
+  backend:
+    build: 
+      context: ./myproject
+      dockerfile: Dockerfile
+    volumes:
+      - ./myproject:/app
+    environment:
+      - DJANGO_DEBUG=True
+      - DJANGO_SECRET_KEY=django-insecure-local-dev-key
+      - DJANGO_ALLOWED_HOSTS=localhost 127.0.0.1 backend
+      - DJANGO_CSRF_TRUSTED_ORIGINS=http://localhost:3000
+    ports:
+      - "8000:8000"
+    command: python manage.py runserver 0.0.0.0:8000
+
+  frontend:
+    build:
+      context: ./tomoe
+      dockerfile: Dockerfile
+      target: build # 開発用にはビルドステージまでを使用（もしくは別途開発用Dockerfileを用意）
+    working_dir: /app
+    volumes:
+      - ./tomoe:/app
+      - /app/node_modules # コンテナ内の node_modules をホスト側から隔離
+    environment:
+      - WDS_SOCKET_PORT=0
+    ports:
+      - "3001:3000"
+    command: sh -c "npm install && npm start"
+
+    depends_on:
+      - backend

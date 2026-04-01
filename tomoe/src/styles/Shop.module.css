@@ -1,0 +1,232 @@
+/* カラーパレットの定義 */
+:root {
+    --primary-color: #FF6B6B; /* 明るいコーラル */
+    --secondary-color: #4ECDC4; /* 明るいターコイズ */
+    --accent-color: #FFE66D; /* 明るいイエロー */
+    --background-color: #FAF3E0; /* 明るいパステルブルー */
+    --card-bg-color: #F0F0F0; /* ライトグレーカード背景 */
+    --card-hover-bg-color: #E0E0E0; /* カードホバー時背景 */
+    --text-color: #333333; /* ダークグレーテキスト */
+    --sub-text-color: #666666; /* ミディアムグレーテキスト */
+    --gold-color: #FFD700; /* ゴールド色 */
+}
+
+/* Shopコンテナ */
+.shopContainer {
+    padding: 150px 20px 100px;
+    width: 100%;
+    height: 100%;
+    /* padding-top: 100px; */
+    /* margin: 0; */
+    background-color: var(--background-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* タイトルのスタイル */
+.shopTitle {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--primary-color);
+    position: relative;
+    display: inline-block;
+}
+
+.shopTitle::after {
+    content: '';
+    position: absolute;
+    width: 60%;
+    height: 5px;
+    background-color: var(--secondary-color);
+    bottom: -15px;
+    left: 20%;
+    border-radius: 2px;
+}
+
+/* ソートオプションのスタイル */
+.sortOptions {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    background: #fff;
+    /* background: var(--card-bg-color); */
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sortOptions label {
+    margin-right: 15px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.sortOptions select {
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background: #fff;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+/* 商品グリッドのスタイル */
+.productsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+/* 商品カードのスタイリング */
+.productCard {
+    background: #fff;
+    /* background: var(--card-bg-color); */
+    border: 2px solid #e0e0e0;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.productCard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    background-color: var(--card-hover-bg-color);
+}
+
+/* 商品画像のスタイル */
+.productImage {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+/* 商品情報のスタイル */
+.productInfo {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.productTitle {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+.productGenre {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: var(--sub-text-color);
+}
+
+.productPrice {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-top: auto;
+}
+
+.productRating {
+    margin-top: 10px;
+    color: var(--gold-color);
+    font-size: 1.2rem;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .shopContainer {
+        padding: 150px 10px;
+        
+        
+    }
+
+    .shopTitle {
+        font-size: 2.5rem;
+    }
+
+    .sortOptions {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .sortOptions label {
+        margin-bottom: 10px;
+    }
+
+    .productsGrid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 20px;
+        padding: 0 10px;
+    }
+
+    .productImage {
+        height: 180px;
+    }
+
+    .purchaseButton {
+        width: 100%;
+        padding: 12px;
+        font-size: 1rem;
+    }
+
+    .closeButton {
+        font-size: 0.9rem;
+    }
+}
+
+
+.cartSummary {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.cartSummary.updated {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+.cartSummary p {
+    margin: 5px 0;
+}
+
+.cartSummary button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    outline: none;
+}
+
+.cartSummary button:hover {
+    background-color: var(--secondary-color);
+}
+
+.cartSummary button:focus {
+    box-shadow: 0 0 0 3px rgba(78, 205, 196, 0.5);
+}

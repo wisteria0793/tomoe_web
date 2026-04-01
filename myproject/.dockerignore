@@ -1,0 +1,15 @@
+# Build context optimization
+guesthouse_tomoe/staticfiles/
+guesthouse_tomoe/static/
+guesthouse_tomoe/fonts/
+guesthouse_tomoe/media/
+static/
+
+# Other
+.git
+.DS_Store
+__pycache__/
+*.pyc
+venv/
+.env
+db.sqlite3

@@ -1,0 +1,120 @@
+{
+    "navbar": {
+        "facility": "Facilities",
+        "facilityList": {
+            "facility1": "Guesthouse Tomoe.com",
+            "facility2": "Tomoe.com2 Onepiece house",
+            "facility3": "Tomoe.com3 Music&Stay",
+            "facility4": "Tomoe.com4 Motomachi",
+            "facility5": "Tomoe.com5 Cafe&Stay",
+            "facility6": "Tomoe.com6 PremiumStay",
+            "facility7": "mimosa"
+        },
+        "booking": "Booking",
+        "faq": "FAQ",
+        "contact": "Contact",
+        "shop": "Shopping",
+        "company": "Hakodate Shinoh Co., Ltd.",
+        "english": "English",
+        "japanese": "Japanese"
+    },
+    "header": {
+        "title": "Guesthouse Tomoe.com",
+        "catchphrase": "Not just a place to stay—an experience to remember."
+    },
+
+    "message": "Guesthouse Tomoe.com opened its first building in 2018, followed by the launch of the Onepiece House the next year. Currently, we operate six facilities and manage one additional property, each with a unique concept. From simple, tranquil atmospheres to highly themed spaces showcasing figures and decorations, our designs combine comfort and individuality to provide guests with a truly special experience. Today, we welcome many visitors from both Japan and abroad. At Tomoe.com, we strive every day to enhance our services, ensuring an unforgettable stay for all our guests and the local community in Hakodate.",
+
+    "staySteps": {
+        "title": "stay-steps",
+        "step1": {
+            "title": "Select an accommodation",
+            "description": "Please select your preferred facility."
+        },
+        "step2": {
+            "title": "Make a Reservation",
+            "description": "Confirm your reservation for the desired date and time."
+        },
+        "step3": {
+            "title": "Make a Payment",
+            "description": "Please complete the prepayment on the reservation page when making your booking. We use Stripe for a safe and seamless payment process."
+        },
+        "step4": {
+            "title": "Enter Guest Information",
+            "description": "Please fill in your information using the form sent to your email address."
+        },
+        "step5": {
+            "title": "Check-In Information",
+            "description": "We will send detailed information about the check-in process to the email address you provided."
+        },
+        "step6": {
+            "title": "Self Check-In",
+            "description": "Guests are requested to proceed directly to the accommodation. Please check in using the specified method."
+        }
+    },
+
+
+    "button": {
+        "book": "Book",
+        "shop": "Shop",
+        "showmore": "Show more",
+        "privacy": "Privacy Policy",
+        "faq": "Show more"
+    },
+    "access": {
+        "title": "Access",
+        "facilityName": "Guesthouse Tomoe.com",
+        "address": "1-2 Matsukaze-cho, Hakodate, Hokkaido",
+        "phone": "TEL: 080-9322-4522",
+        "email": "email: hakodateshino0901@gmail.com",
+        "accessMethod": "Access Method",
+        "station": "Hakodate Station",
+        "shinkansen": "Hakodate Shinkansen Station",
+        "airport": "Hakodate Airport",
+        "port": "Hakodate Port",
+        "walkTime": "10 minutes walk",
+        "trainTime": "400 yen/15 minutes",
+        "busTime": "500 yen/20 minutes",
+        "taxiTime": "2000 yen/15 minutes"
+    },
+    "footer": {
+        "copyright": "© 2025 Guesthouse Tomoe.com All rights reserved.",
+        "privacy": "Privacy Policy",
+        "privacyLink": "/privacy-policy"
+    },
+    "privacy": {
+        "title": "Privacy Policy",
+        "lastUpdated": "Last Updated",
+        "collection": {
+            "title": "Information Collection",
+            "content": "We collect information provided by users (such as name, email address, etc.) and automatically collect information about site usage (such as IP address, browser type, etc.)."
+        },
+        "usage": {
+            "title": "Use of Information",
+            "intro": "The collected information is used for the following purposes",
+            "purpose1": "Service provision and improvement",
+            "purpose2": "User support",
+            "purpose3": "Marketing and promotion"
+        },
+        "sharing": {
+            "title": "Information Sharing",
+            "content": "We will not share personal information with third parties without user consent, except when required by legal obligations or necessary for service provision."
+        },
+        "cookies": {
+            "title": "About Cookies",
+            "content": "We use cookies to enhance user experience. Cookies are small data files stored in your browser."
+        },
+        "security": {
+            "title": "Security",
+            "content": "We implement appropriate security measures to protect users' personal information. However, we cannot guarantee complete security of information on the Internet."
+        },
+        "changes": {
+            "title": "Changes to Privacy Policy",
+            "content": "We reserve the right to modify this privacy policy at any time. Any changes will be announced on this page."
+        },
+        "contact": {
+            "title": "Contact",
+            "content": "If you have any questions or concerns about our privacy policy, please contact us at:"
+        }
+    }
+} 
