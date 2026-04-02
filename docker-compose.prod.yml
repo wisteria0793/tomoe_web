@@ -11,7 +11,7 @@ services:
       - DJANGO_ALLOWED_HOSTS=${DJANGO_ALLOWED_HOSTS}
       - DJANGO_CSRF_TRUSTED_ORIGINS=${DJANGO_CSRF_TRUSTED_ORIGINS}
       - DATABASE_URL=postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB}
-    command: gunicorn --bind 0.0.0.0:8000 guesthouse_tomoe.wsgi:application
+    command: gunicorn --bind 0.0.0.0:8000 --chdir /app/guesthouse_tomoe guesthouse_tomoe.wsgi:application
     depends_on:
       - db
     ports:
