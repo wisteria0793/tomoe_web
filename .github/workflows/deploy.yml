@@ -26,8 +26,9 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22
           script: |
+            git config --global --add safe.directory /var/www/tomoe_web
             cd /var/www/tomoe_web
             git pull origin main
-            docker compose -f docker-compose.prod.yml up -d --build
-            docker system prune -f
+            sudo docker compose -f docker-compose.prod.yml up -d --build
+            sudo docker system prune -f
 
