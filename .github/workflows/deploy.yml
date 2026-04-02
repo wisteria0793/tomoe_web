@@ -12,6 +12,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v6
 
+      - name: Check Secrets Visibility (Diagnostic)
+        run: |
+          if [ -n "${{ secrets.SERVER_IP }}" ]; then echo "SERVER_IP is SET"; else echo "SERVER_IP is MISSING"; fi
+          if [ -n "${{ secrets.SERVER_USER }}" ]; then echo "SERVER_USER is SET"; else echo "SERVER_USER is MISSING"; fi
+          if [ -n "${{ secrets.SSH_PRIVATE_KEY }}" ]; then echo "SSH_PRIVATE_KEY is SET"; else echo "SSH_PRIVATE_KEY is MISSING"; fi
+
       - name: Deploy to VPS via SSH
         uses: appleboy/ssh-action@v1.2.0
         with:
