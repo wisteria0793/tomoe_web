@@ -56,7 +56,10 @@ local_settings.py
 **/*.mov
 
 
-# React
+# Frontend large assets
+tomoe/public/images/build*
+tomoe/public/fonts/images/
+tomoe/public/images/mimosa/
 /tomoe/build/
 /tomoe/.pnp
 /tomoe/.pnp.js
