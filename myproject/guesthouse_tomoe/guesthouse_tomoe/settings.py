@@ -213,20 +213,15 @@ EMAILPORT = 587
 
 
 
-# 1) メールバックエンド (SMTP) を使用
 # Email settings
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-
-# 2) SMTP サーバ情報
-EMAIL_HOST = 'localhost'     # VPS 上の Postfix を使う場合は 'localhost'
-EMAIL_PORT = 25              # Submission ポート(587) を使う場合は 587
-EMAIL_HOST_USER = ''         # 基本的にローカルSMTPなら未設定
-EMAIL_HOST_PASSWORD = ''     # 同上
-EMAIL_USE_TLS = False        # 必要に応じて True
-EMAIL_USE_SSL = False        # 必要に応じて True
-
-# 3) 送信元の既定アドレス(From) を設定 (任意)
-DEFAULT_FROM_EMAIL = 'no-reply@hakodate-tomoe.com'
+EMAIL_HOST = os.environ.get('EMAIL_HOST', 'smtp.gmail.com')
+EMAIL_PORT = int(os.environ.get('EMAIL_PORT', 587))
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER', 'hakodateshino0901@gmail.com')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', 'ucoxgewctksnnokl')
+EMAIL_USE_TLS = os.environ.get('EMAIL_USE_TLS', 'True') == 'True'
+EMAIL_USE_SSL = os.environ.get('EMAIL_USE_SSL', 'False') == 'True'
+DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL', EMAIL_HOST_USER)
 
 
 
