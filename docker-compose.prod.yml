@@ -18,6 +18,7 @@ services:
       - "8100:8000"
     volumes:
       - ./staticfiles:/app/guesthouse_tomoe/staticfiles
+      - ./media:/app/guesthouse_tomoe/static/media
 
   frontend:
     build:

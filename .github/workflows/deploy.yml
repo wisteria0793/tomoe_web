@@ -32,8 +32,12 @@ jobs:
             git pull origin main
             docker compose -f docker-compose.prod.yml up -d --build
             docker compose -f docker-compose.prod.yml ps
-            # 静的ファイルの収集 (Admin デザイン用)
+            # 静的ファイル & メディアファイルの準備
+            sudo mkdir -p /var/www/tomoe_web/staticfiles /var/www/tomoe_web/media
+            sudo chmod -R 777 /var/www/tomoe_web/media  # コンテナ側からの書き込みを許可
+            sudo chmod -R 755 /var/www/tomoe_web/staticfiles
             sudo docker compose -f docker-compose.prod.yml exec -T backend python manage.py collectstatic --noinput
+            sudo chown -R www-data:www-data /var/www/tomoe_web/staticfiles /var/www/tomoe_web/media
             docker system prune -f
             # リポジトリの設定をホストの Nginx 設定ディレクトリに反映
             sudo cp /var/www/tomoe_web/nginx/prod.conf /etc/nginx/sites-enabled/tomoe_new
