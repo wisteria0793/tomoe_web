@@ -6,9 +6,9 @@ import styles from '../../styles/HomePage.module.css';
 function TopImage() {
     // スライドショーの画像リスト
     const images = [
-        "/images/build1/facade1.jpg", // 適切な画像パスに変更
-        "/images/build1/DSC_0078.jpg",
-        "/images/build1/DSC_0080.jpg"
+        "/facade1.jpg", // 適切な画像パスに変更
+        "/DSC_0078.jpg",
+        "/DSC_0080.jpg"
     ];
 
     // 現在表示中の画像のインデックス

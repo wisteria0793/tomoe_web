@@ -12,8 +12,8 @@ const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLIC_KEY);
 
 function ReservationDetails() {
     const { t, i18n } = useTranslation();
-    // const API_BASE_URL = 'http://127.0.0.1:8000/api';
-    const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://127.0.0.1:8000/api';
+    // const API_BASE_URL = '/api';
+    const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || '/api';
     const location = useLocation();
     const [reservationDetails, setReservationDetails] = useState({
         facilityId: null,
@@ -314,7 +314,7 @@ function ReservationDetails() {
                                 </div>
                                 <Card className={styles.roomCard}>
                                     <img
-                                        src={reservationDetails.imageUrl || "/images/build1/DSC_1077.jpg"}
+                                        src={reservationDetails.imageUrl || "/DSC_1077.jpg"}
                                         alt="Room"
                                         className={styles.roomImg}
                                     />

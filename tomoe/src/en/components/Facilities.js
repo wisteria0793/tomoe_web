@@ -4,8 +4,8 @@ import { Button, Card, Col, Row } from 'react-bootstrap';
 import styles from '../../styles/Facilities.module.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const BASE_URL = "http://127.0.0.1:8000";
-const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://127.0.0.1:8000/api';
+const BASE_URL = "";
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || '/api';
 
 function Facilities() {
     const [facilities, setFacilities] = useState([]);

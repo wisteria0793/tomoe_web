@@ -13,8 +13,8 @@ function FacilityDetail() {
     const { id } = useParams();
     const { i18n } = useTranslation();
     const navigate = useNavigate();
-    // const API_BASE_URL = "http://127.0.0.1:8000/api";
-    const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://127.0.0.1:8000/api';
+    // const API_BASE_URL = "/api";
+    const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || '/api';
     const [facility, setFacility] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);

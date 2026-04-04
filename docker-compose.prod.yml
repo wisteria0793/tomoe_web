@@ -21,6 +21,9 @@ services:
     build:
       context: ./tomoe
       dockerfile: Dockerfile
+      args:
+        - REACT_APP_API_BASE_URL=${REACT_APP_API_BASE_URL}
+        - REACT_APP_STRIPE_PUBLIC_KEY=${REACT_APP_STRIPE_PUBLIC_KEY}
     ports:
       - "3001:80"
 

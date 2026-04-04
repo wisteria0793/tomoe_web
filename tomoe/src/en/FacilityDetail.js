@@ -12,7 +12,7 @@ function FacilityDetail() {
     const [loading, setLoading] = useState(true); // ローディング状態
     const [error, setError] = useState(null); // エラー状態
     const [showAllImages, setShowAllImages] = useState(false); // 画像の表示切り替え
-    const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://127.0.0.1:8000/api';
+    const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || '/api';
 
     useEffect(() => {
         const fetchFacility = async () => {

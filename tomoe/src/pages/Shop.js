@@ -16,8 +16,8 @@ function Shop() {
   const [cart, setCart] = useState([]);
   const [quantity, setQuantity] = useState(1);
   const navigate = useNavigate();
-  // const API_BASE_URL = 'http://127.0.0.1:8000/api';
-  const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://127.0.0.1:8000/api';
+  // const API_BASE_URL = '/api';
+  const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || '/api';
  
   const fetchProducts = async () => {
     try {

@@ -18,8 +18,8 @@ function Reservation() {
     const [guests, setGuests] = useState({ adult: 1, child: 0, infant: 0 }); // ゲストの状態
     const [loading, setLoading] = useState(false);
 
-    const BASE_URL = "http://127.0.0.1:8000";
-    const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://127.0.0.1:8000/api';
+    const BASE_URL = "";
+    const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || '/api';
     const IMAGE_BASE_URL = process.env.REACT_APP_IMAGE_BASE_URL || 'https://127.0.0.1:8000';
 
     useEffect(() => {

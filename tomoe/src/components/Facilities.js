@@ -5,15 +5,15 @@ import styles from '../styles/Facilities.module.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useTranslation } from 'react-i18next';
 
-const BASE_URL = "http://127.0.0.1:8000";
+const BASE_URL = "";
 
 function Facilities() {
     const { i18n } = useTranslation();
     const [facilities, setFacilities] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-    // const API_BASE_URL = 'http://127.0.0.1:8000/api';
-    const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://127.0.0.1:8000/api';
+    // const API_BASE_URL = '/api';
+    const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || '/api';
     useEffect(() => {
         const fetchFacilities = async () => {
             try {

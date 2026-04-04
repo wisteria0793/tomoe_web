@@ -18,7 +18,7 @@ function Payment() {
         address2: '',
     });
     const [isShippingRequired, setIsShippingRequired] = useState(false); // New state for shipping requirement
-    const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://127.0.0.1:8000/api';
+    const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || '/api';
     const shippingCost = isShippingRequired ? 750 : 0; // 配送料を固定
     const [errors, setErrors] = useState({}); // エラーメッセージを管理
     const [loading, setLoading] = useState(false);
