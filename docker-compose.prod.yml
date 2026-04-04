@@ -16,6 +16,8 @@ services:
       - db
     ports:
       - "8100:8000"
+    volumes:
+      - ./staticfiles:/app/guesthouse_tomoe/staticfiles
 
   frontend:
     build:
