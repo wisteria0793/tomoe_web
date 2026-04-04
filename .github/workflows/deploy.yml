@@ -31,5 +31,8 @@ jobs:
             cd /var/www/tomoe_web
             git pull origin main
             docker compose -f docker-compose.prod.yml up -d --build
+            docker compose -f docker-compose.prod.yml ps
             docker system prune -f
+            # ホスト側の Nginx をリロードして設定を反映（sudo権限が必要な場合があります）
+            sudo nginx -t && sudo nginx -s reload || echo "Nginx reload failed, please check manually."
 
