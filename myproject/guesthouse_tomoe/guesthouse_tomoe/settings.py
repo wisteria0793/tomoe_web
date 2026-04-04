@@ -51,6 +51,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -138,7 +139,7 @@ USE_TZ = True
 STATIC_URL = '/static/'  # 静的ファイルのURL
 
 # collectstaticで収集された静的ファイルの保存先
-STATIC_ROOT = '/var/www/myproject/guesthouse_tomoe/staticfiles'  # STATIC_ROOTは別のディレクトリに設定
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 # Reactのビルドディレクトリやその他の静的ファイルディレクトリ
 STATICFILES_DIRS = [
@@ -238,7 +239,7 @@ DEFAULT_FROM_EMAIL = 'no-reply@hakodate-tomoe.com'
 # EMAIL_HOST_PASSWORD = 'yrvm qgfx ywgu owms'  # Gmailアプリパスワード
 # DEFAULT_FROM_EMAIL = EMAIL_HOST_USER  # 送信元メールアドレス
 
-STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+# STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 BCC = [
     'hakodate2pack@yahoo.co.jp',
     'wisteria07930791@gmail.com',
