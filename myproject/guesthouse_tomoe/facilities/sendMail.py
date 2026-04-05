@@ -65,7 +65,7 @@ def send_reservation_email(metadata):
     send_mail(
         subject=subject,
         message=text_content,
-        from_email='no-reply@hakodate-tomoe.com',
+        from_email=settings.DEFAULT_FROM_EMAIL,
         recipient_list=all_recipients,
         fail_silently=False,
         html_message=html_content

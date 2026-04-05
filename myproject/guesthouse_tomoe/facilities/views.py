@@ -376,9 +376,8 @@ def contact_view(request):
             send_mail(
                 subject,
                 body,
-                'no-reply@hakodate-tomoe.com',  # 送信元 (From)
-                # ['wisteria07930791@gmail.com'],        # 送信先 (To)
-                settings.BCC,
+                settings.DEFAULT_FROM_EMAIL,  # 送信元 (From)
+                settings.BCC,                 # 送信先 (To)
                 fail_silently=False,
                 # bcc=settings.BCC,
                 # bcc=["wisteria07930791@gmail.com"]
@@ -404,7 +403,7 @@ def mail(data):
     send_mail(
         subject,
         body,
-        'no-reply@hakodate-tomoe.com',
+        settings.DEFAULT_FROM_EMAIL,
         settings.BCC,
         fail_silently=False,
     )
@@ -419,7 +418,7 @@ def mail2():
     send_mail(
         subject,
         body,
-        'no-reply@hakodate-tomoe.com',
+        settings.DEFAULT_FROM_EMAIL,
         settings.BCC,
         fail_silently=False,
     )
