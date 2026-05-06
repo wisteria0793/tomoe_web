@@ -32,5 +32,5 @@ WORKDIR /app/guesthouse_tomoe
 # Expose port
 EXPOSE 8000
 
-# Default command (can be overridden in docker-compose)
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+# Default command for direct container runs; overridden by docker-compose in dev
+CMD ["gunicorn", "--bind", "0.0.0.0:8000", "--chdir", "/app/guesthouse_tomoe", "guesthouse_tomoe.wsgi:application"]
